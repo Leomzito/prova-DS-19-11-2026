@@ -44,7 +44,20 @@
         <table>
             <tr>
                 <th>ID:</th>
+                <th>NOME:</th>
+                <th>EMAIL:</th>
+                <th>SALÁRIO:</th>
+                <th>TIPO DE FUNCIONÁRIO:</th>
             </tr>
+            <?php foreach($funcionarios as funcionario) {?>
+                <tr>
+                    <td><?= funcionario["id"] ?></td>
+                    <td><?= funcionario["nome"] ?></td>
+                    <td><?= funcionario["email"] ?></td>
+                    <td><?= funcionario["salario"] ?></td>
+                    <td><?= funcionario["tipo_funcionario"] ?></td>
+                </tr>
+            <?php}?>
         </table>
     </div>
 </body>
