@@ -1,7 +1,7 @@
 <?php
-    require_once __DIR__ . "" ///
+    require_once __DIR__ . "/../app/http/controllers/gerenciamentoController.php"; ///
     return [
-        'GET' => ['portfolio'] => [new gerenciamentoController(),'index'],
+        'GET' => ['gerenciamento'] => [new gerenciamentoController(),'index'],
     ],
     'POST' => []
 ?>

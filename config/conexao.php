@@ -6,7 +6,7 @@
     try {
         $pdo=new PDO("mysql:$host;dbname=$banco; charset=utf8mb4",$usuario,$senha);
         $pdo->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION);
-    } cacth (PDOException $erro) {
-        echo"Erro ao conectar:"$erro->getMessage();
+    } catch (PDOException $erro) {
+        echo"Erro ao conectar:", $erro ->getMessage();
     }
 ?>

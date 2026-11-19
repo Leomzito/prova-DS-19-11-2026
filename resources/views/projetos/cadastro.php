@@ -2,10 +2,10 @@
     require __DIR__ . "/../../../config/conexao.php"
     SESSION_START();
     $PDO->EXEC("CREATE TABLE IF NOT EXISTS funcionarios (
-    nome varchar(100),
-    email varchar(50),
-    salario INT;
-    tipo_funcionario varchar(50)");
+    nome varchar(150) PRIMARY KEY AUTO INCREMENT,
+    email varchar(150),
+    salario FLOAT(10,2);
+    tipo_funcionario varchar(30)");
     $mensagem="";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = $_POST["nome"];
