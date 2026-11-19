@@ -20,3 +20,32 @@
     $buscar = "SELECT*FROM funcionarios";
     $stmt = $pdo->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de funcionários</title>
+</head>
+<body>
+    <nav><a href="index.php">Página Inicial</nav>
+    <h1>Cadastrar funcionário</h1>
+    <form method="POST">
+        <label for="nome">Nome do funcionário</label>
+        <input type="text" id="nome" name="nome" maxlenght="100" placeholder="Nome do funcionário" required>
+    <?php
+        if ($mensagem!="") {
+            echo"<p>".$mensagem."</p>";
+        }
+    ?>
+    <div class = "tabela_cadastro">
+        <h2>Funcionários cadastrados</h2>
+        <table>
+            <tr>
+                <th>ID:</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
